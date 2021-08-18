@@ -20,7 +20,7 @@ void setup() {
   //load textlines and add to scans
   //and try to find label(s)
   Table table = loadTable("private/page1-1500.csv", "header");
-  for (TableRow row : table.rows()) { //contains only scans with at least one textline
+  for (TableRow row : table.rows()) {
     TextLine t = new TextLine(row);
     Scan scan = scans.get(t.image);
     scan.image = t.image;
